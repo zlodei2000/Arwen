@@ -60,7 +60,7 @@ public:
 };
 
 
-Log         * sysLog = new Log ( "Arwen.log" );
+Log         * sysLog = new Log ( "QiiViewer.log" );
 Application * Application :: instance = NULL;
 MetaClass	  Application :: classInstance ( "Application", &Object :: classInstance );
 
@@ -81,7 +81,7 @@ Application :: Application ( const char * theName, const char * argsStr ) : Obje
 	resourceManager = new ResourceManager ( "ResourceManager" );
 
 	resourceManager -> registerSource ( new OsFileSystem () );
-	resourceManager -> registerSource ( new PakFileSystem ( "f:\\quake2\\baseq2\\pak0.pak" ) );
+	resourceManager -> registerSource ( new PakFileSystem ( "d:\\quake2\\baseq2\\pak0.pak" ) );
 
 										// register image decoders
 	resourceManager -> registerDecoder ( new TgaDecoder  ( resourceManager ) );

@@ -91,7 +91,6 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>.\Debug\Arwen.exe</OutputFile>
       <AdditionalLibraryDirectories>..\jpeg;..\libpng;..\zlib;\sdk\dx8\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glu32.lib;jpeg.lib;libpng.lib;zlib.lib;winmm.lib;dinput.lib;dxguid.lib;dinput8.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/SAFESEH:NO /NODEFAULTLIB:LIBCMTD %(AdditionalOptions)</AdditionalOptions>
