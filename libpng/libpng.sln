@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpng", "libpng.vcxproj", "{98B84E49-20CD-4773-81F4-82B0A984AA1B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8D00333B-2BFF-4655-8DE2-E6509C841FD0} = {8D00333B-2BFF-4655-8DE2-E6509C841FD0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\zlib\zlib.vcxproj", "{8D00333B-2BFF-4655-8DE2-E6509C841FD0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jpeg", "..\jpeg\jpeg.vcxproj", "{A49F1160-41E4-4B5E-9DEA-C2FD93DA3A7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98B84E49-20CD-4773-81F4-82B0A984AA1B}.Debug|x86.ActiveCfg = Debug|Win32
+		{98B84E49-20CD-4773-81F4-82B0A984AA1B}.Debug|x86.Build.0 = Debug|Win32
+		{98B84E49-20CD-4773-81F4-82B0A984AA1B}.Release|x86.ActiveCfg = Release|Win32
+		{98B84E49-20CD-4773-81F4-82B0A984AA1B}.Release|x86.Build.0 = Release|Win32
+		{8D00333B-2BFF-4655-8DE2-E6509C841FD0}.Debug|x86.ActiveCfg = Debug|Win32
+		{8D00333B-2BFF-4655-8DE2-E6509C841FD0}.Debug|x86.Build.0 = Debug|Win32
+		{8D00333B-2BFF-4655-8DE2-E6509C841FD0}.Release|x86.ActiveCfg = Release|Win32
+		{8D00333B-2BFF-4655-8DE2-E6509C841FD0}.Release|x86.Build.0 = Release|Win32
+		{A49F1160-41E4-4B5E-9DEA-C2FD93DA3A7A}.Debug|x86.ActiveCfg = Debug|Win32
+		{A49F1160-41E4-4B5E-9DEA-C2FD93DA3A7A}.Debug|x86.Build.0 = Debug|Win32
+		{A49F1160-41E4-4B5E-9DEA-C2FD93DA3A7A}.Release|x86.ActiveCfg = Release|Win32
+		{A49F1160-41E4-4B5E-9DEA-C2FD93DA3A7A}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D066C743-542E-4016-8457-295578926D26}
+	EndGlobalSection
+EndGlobal

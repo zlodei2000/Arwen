@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{BCCED512-FD2D-4440-96FE-416EF1AAB6DA}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(SolutionDir)\zlib\Debug;$(SolutionDir)\libpng\Debug;$(SolutionDir)\jpeg\Debug;$(SolutionDir)\dx8sdk\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>false</MinimalRebuild>
+      <AdditionalOptions> /vmg</AdditionalOptions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>.;..\3D;..\Foundation;..\Interface;..\Occlusion;..\Resource;..\jpeg;..\zlib;..\libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\Arwen.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\Arwen.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\Arwen.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Debug\Arwen.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\jpeg;..\libpng;..\zlib;\sdk\dx8\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;jpeg.lib;libpng.lib;zlib.lib;winmm.lib;dinput.lib;dxguid.lib;dinput8.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/SAFESEH:NO /NODEFAULTLIB:LIBCMTD %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalOptions> /vmg</AdditionalOptions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>.;..\3D;..\Foundation;..\Interface;..\Occlusion;..\Resource;..\jpeg;..\zlib;..\libpng;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\Arwen.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\Arwen.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\Arwen.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release\Arwen.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\jpeg;..\libpng;..\zlib;\sdk\dx8\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;jpeg.lib;libpng.lib;zlib.lib;winmm.lib;dxguid.lib;dinput.lib;dinput8.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\3D\BoundingBox.cpp" />
+    <ClCompile Include="..\3D\BoundingSphere.cpp" />
+    <ClCompile Include="..\3D\BspTree.cpp" />
+    <ClCompile Include="..\3D\Camera.cpp" />
+    <ClCompile Include="..\3D\Font.cpp" />
+    <ClCompile Include="..\3D\Frustrum.cpp" />
+    <ClCompile Include="..\3D\Lightmap.cpp" />
+    <ClCompile Include="..\3D\Math3D.cpp" />
+    <ClCompile Include="..\3D\Matrix2D.cpp" />
+    <ClCompile Include="..\3D\Matrix3D.cpp" />
+    <ClCompile Include="..\3D\Mesh3D.cpp" />
+    <ClCompile Include="..\3D\OpenGLView.cpp" />
+    <ClCompile Include="..\3D\Plane.cpp" />
+    <ClCompile Include="..\3D\Poly3D.cpp" />
+    <ClCompile Include="..\3D\Quaternion.cpp" />
+    <ClCompile Include="..\3D\Ray.cpp" />
+    <ClCompile Include="..\3D\Sky.cpp" />
+    <ClCompile Include="..\3D\Texture.cpp" />
+    <ClCompile Include="..\3D\Transform2D.cpp" />
+    <ClCompile Include="..\3D\Transform3D.cpp" />
+    <ClCompile Include="..\3D\Vector3D.cpp" />
+    <ClCompile Include="..\3D\View.cpp" />
+    <ClCompile Include="..\Foundation\Array.cpp" />
+    <ClCompile Include="..\Foundation\AutoreleasePool.cpp" />
+    <ClCompile Include="..\Foundation\ConfigParser.cpp" />
+    <ClCompile Include="..\Foundation\crc32.cpp" />
+    <ClCompile Include="..\Foundation\Data.cpp" />
+    <ClCompile Include="..\Foundation\Dictionary.cpp" />
+    <ClCompile Include="..\Foundation\FileSystem.cpp" />
+    <ClCompile Include="..\Foundation\FileUtils.cpp" />
+    <ClCompile Include="..\Foundation\Log.cpp" />
+    <ClCompile Include="..\Foundation\MutableData.cpp" />
+    <ClCompile Include="..\Foundation\Object.cpp" />
+    <ClCompile Include="..\Foundation\ObjStr.cpp" />
+    <ClCompile Include="..\Foundation\Pool.cpp" />
+    <ClCompile Include="..\Foundation\Queue.cpp" />
+    <ClCompile Include="..\Foundation\Set.cpp" />
+    <ClCompile Include="..\Foundation\Stack.cpp" />
+    <ClCompile Include="..\Foundation\Timer.cpp" />
+    <ClCompile Include="..\Interface\BasicCommands.cpp" />
+    <ClCompile Include="..\Interface\Console.cpp" />
+    <ClCompile Include="..\Interface\ConsoleCommand.cpp" />
+    <ClCompile Include="..\Interface\Controller.cpp" />
+    <ClCompile Include="..\Interface\DirectXInputReader.cpp" />
+    <ClCompile Include="..\Interface\Events.cpp" />
+    <ClCompile Include="..\Interface\Model.cpp" />
+    <ClCompile Include="..\Resource\AseDecoder.cpp" />
+    <ClCompile Include="..\Resource\BmpDecoder.cpp" />
+    <ClCompile Include="..\Resource\CelDecoder.cpp" />
+    <ClCompile Include="..\Resource\GifDecoder.cpp" />
+    <ClCompile Include="..\Resource\JpegDecoder.cpp" />
+    <ClCompile Include="..\Resource\Md2Decoder.cpp" />
+    <ClCompile Include="..\Resource\Md3Decoder.cpp" />
+    <ClCompile Include="..\Resource\PakFileSystem.cpp" />
+    <ClCompile Include="..\Resource\PcxDecoder.cpp" />
+    <ClCompile Include="..\Resource\PixelFormat.cpp" />
+    <ClCompile Include="..\Resource\PngDecoder.cpp" />
+    <ClCompile Include="..\Resource\ResourceDecoder.cpp" />
+    <ClCompile Include="..\Resource\ResourceManager.cpp" />
+    <ClCompile Include="..\Resource\ResourceSource.cpp" />
+    <ClCompile Include="..\Resource\RgbDecoder.cpp" />
+    <ClCompile Include="..\Resource\TgaDecoder.cpp" />
+    <ClCompile Include="..\Resource\TgaEncoder.cpp" />
+    <ClCompile Include="..\Resource\WalDecoder.cpp" />
+    <ClCompile Include="..\Resource\ZipFileSystem.cpp" />
+    <ClCompile Include="AccSubScene.cpp" />
+    <ClCompile Include="Animator.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Billboard.cpp" />
+    <ClCompile Include="ColDet.cpp" />
+    <ClCompile Include="CompositeObject.cpp" />
+    <ClCompile Include="Explosion.cpp" />
+    <ClCompile Include="Fire.cpp" />
+    <ClCompile Include="Fog.cpp" />
+    <ClCompile Include="Fountain.cpp" />
+    <ClCompile Include="GameController.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="LinearFog.cpp" />
+    <ClCompile Include="LinkedObject.cpp" />
+    <ClCompile Include="MagicSphere.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MeshObject.cpp" />
+    <ClCompile Include="ParticleSystem.cpp" />
+    <ClCompile Include="RotationAnimator.cpp" />
+    <ClCompile Include="SceneDecoder.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="ShaderPass.cpp" />
+    <ClCompile Include="SmokeTrail.cpp" />
+    <ClCompile Include="Snow.cpp" />
+    <ClCompile Include="StencilSubScene.cpp" />
+    <ClCompile Include="SubScene.cpp" />
+    <ClCompile Include="VisualObject.cpp" />
+    <ClCompile Include="World.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Arwen.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3D\3DDefs.h" />
+    <ClInclude Include="..\3D\BoundingBox.h" />
+    <ClInclude Include="..\3D\BoundingSphere.h" />
+    <ClInclude Include="..\3D\BspTree.h" />
+    <ClInclude Include="..\3D\Camera.h" />
+    <ClInclude Include="..\3D\Font.h" />
+    <ClInclude Include="..\3D\Frustrum.h" />
+    <ClInclude Include="..\3D\LightMap.h" />
+    <ClInclude Include="..\3D\Mapping.h" />
+    <ClInclude Include="..\3D\Math3D.h" />
+    <ClInclude Include="..\3D\Matrix2D.h" />
+    <ClInclude Include="..\3D\Matrix3D.h" />
+    <ClInclude Include="..\3D\Mesh3D.h" />
+    <ClInclude Include="..\3D\OpenGLView.h" />
+    <ClInclude Include="..\3D\Plane.h" />
+    <ClInclude Include="..\3D\Poly3D.h" />
+    <ClInclude Include="..\3D\Portal.h" />
+    <ClInclude Include="..\3D\Quaternion.h" />
+    <ClInclude Include="..\3D\Ray.h" />
+    <ClInclude Include="..\3D\Sky.h" />
+    <ClInclude Include="..\3D\Texture.h" />
+    <ClInclude Include="..\3D\Transform2D.h" />
+    <ClInclude Include="..\3D\Transform3D.h" />
+    <ClInclude Include="..\3D\Vector2D.h" />
+    <ClInclude Include="..\3D\Vector3D.h" />
+    <ClInclude Include="..\3D\Vector4D.h" />
+    <ClInclude Include="..\3D\View.h" />
+    <ClInclude Include="..\Foundation\Array.h" />
+    <ClInclude Include="..\Foundation\AutoreleasePool.h" />
+    <ClInclude Include="..\Foundation\Coder.h" />
+    <ClInclude Include="..\Foundation\ConfigParser.h" />
+    <ClInclude Include="..\Foundation\Data.h" />
+    <ClInclude Include="..\Foundation\Dictionary.h" />
+    <ClInclude Include="..\Foundation\FileSystem.h" />
+    <ClInclude Include="..\Foundation\FileUtils.h" />
+    <ClInclude Include="..\Foundation\Log.h" />
+    <ClInclude Include="..\Foundation\MutableData.h" />
+    <ClInclude Include="..\Foundation\Object.h" />
+    <ClInclude Include="..\Foundation\ObjStr.h" />
+    <ClInclude Include="..\Foundation\Pool.h" />
+    <ClInclude Include="..\Foundation\Queue.h" />
+    <ClInclude Include="..\Foundation\ResourceSource.h" />
+    <ClInclude Include="..\Foundation\Set.h" />
+    <ClInclude Include="..\Foundation\Stack.h" />
+    <ClInclude Include="..\Foundation\Timer.h" />
+    <ClInclude Include="..\Interface\BasicCommands.h" />
+    <ClInclude Include="..\Interface\Console.h" />
+    <ClInclude Include="..\Interface\ConsoleCommand.h" />
+    <ClInclude Include="..\Interface\Controller.h" />
+    <ClInclude Include="..\Interface\DirectXInputReader.h" />
+    <ClInclude Include="..\Interface\Events.h" />
+    <ClInclude Include="..\Interface\Input.h" />
+    <ClInclude Include="..\Interface\InputReader.h" />
+    <ClInclude Include="..\Interface\Keys.h" />
+    <ClInclude Include="..\Interface\Model.h" />
+    <ClInclude Include="..\Occlusion\OcclusionBuffer.h" />
+    <ClInclude Include="..\Resource\AseDecoder.h" />
+    <ClInclude Include="..\Resource\BmpDecoder.h" />
+    <ClInclude Include="..\Resource\CelDecoder.h" />
+    <ClInclude Include="..\Resource\GifDecoder.h" />
+    <ClInclude Include="..\Resource\JpegDecoder.h" />
+    <ClInclude Include="..\Resource\Md2Decoder.h" />
+    <ClInclude Include="..\Resource\Md3Decoder.h" />
+    <ClInclude Include="..\Resource\PakFileSystem.h" />
+    <ClInclude Include="..\Resource\PcxDecoder.h" />
+    <ClInclude Include="..\Resource\PixelFormat.h" />
+    <ClInclude Include="..\Resource\PngDecoder.h" />
+    <ClInclude Include="..\Resource\QuakeII.h" />
+    <ClInclude Include="..\Resource\ResourceDecoder.h" />
+    <ClInclude Include="..\Resource\ResourceManager.h" />
+    <ClInclude Include="..\Resource\RgbDecoder.h" />
+    <ClInclude Include="..\Resource\TgaDecoder.h" />
+    <ClInclude Include="..\Resource\TgaEncoder.h" />
+    <ClInclude Include="..\Resource\TgaStructs.h" />
+    <ClInclude Include="..\Resource\typedefs.h" />
+    <ClInclude Include="..\Resource\WalDecoder.h" />
+    <ClInclude Include="..\Resource\ZipFileSystem.h" />
+    <ClInclude Include="AccSubScene.h" />
+    <ClInclude Include="Animator.h" />
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="Billboard.h" />
+    <ClInclude Include="ColDet.h" />
+    <ClInclude Include="CompositeObject.h" />
+    <ClInclude Include="Explosion.h" />
+    <ClInclude Include="Fire.h" />
+    <ClInclude Include="Fog.h" />
+    <ClInclude Include="Fountain.h" />
+    <ClInclude Include="GameController.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="LinearFog.h" />
+    <ClInclude Include="LinkedObject.h" />
+    <ClInclude Include="MagicSphere.h" />
+    <ClInclude Include="Math1D.h" />
+    <ClInclude Include="MeshObject.h" />
+    <ClInclude Include="ParticleSystem.h" />
+    <ClInclude Include="RotationAnimator.h" />
+    <ClInclude Include="SceneDecoder.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="ShaderPass.h" />
+    <ClInclude Include="SmokeTrail.h" />
+    <ClInclude Include="Snow.h" />
+    <ClInclude Include="StencilSubScene.h" />
+    <ClInclude Include="SubScene.h" />
+    <ClInclude Include="VisualObject.h" />
+    <ClInclude Include="World.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Arwen.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
